@@ -4,9 +4,6 @@
 
 ## Lista de exercícios 01
 
-## Exercício 3
-Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
-
 #### Fluxograma
 
 ```mermaid
@@ -15,7 +12,7 @@ id1[(# Exercício 3)]
 ```
 
 ```mermaid
-flowchart LR
+flowchart TD
 A([INICIO]) --> B{{Digit um número:}}	
 B --> C[/num/]
 C --> D{núm >= 0}
@@ -28,7 +25,7 @@ H --V--> J{{O número é par!}}
 I --> F
 J -->F
 ```
-####**Pseudocódigo**
+#### **Pseudocódigo**
 ```
 ALGORITMO verifica_par_impar
 DECLARE num, resto: INTEIRO
