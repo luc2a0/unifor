@@ -6,10 +6,6 @@
 
 #### Fluxograma
 
-```mermaid
-flowchart LR
-id1[(# Exercício 3)]
-```
 
 ```mermaid
 flowchart TD
