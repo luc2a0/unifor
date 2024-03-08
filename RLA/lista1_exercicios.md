@@ -56,3 +56,4 @@ FIM
 | 10 | True | 0 | True | "O número é  par!" |
 | 11 | True | 1 | False | "O número é impar" |
 
+site para executar: https://stackedit.io/app#
