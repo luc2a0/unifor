@@ -104,6 +104,23 @@ flowchart TD
 A([INICIO]) --> B([FIM])
 ```
 
+SOLUCAO
+ ```mermaid
+
+flowchart TD
+
+A([INICIO]) --> B{{Digite um número: }} 
+B --> C[\n\]
+C --> D{n >= 0 }
+D --TRUE--> E{ n %2= 0}
+D --FALSE--> F[[num < 0]]
+F--> J{{Digite um número positivo}} 
+J --LOOP--> B
+E --TRUE--> G{{ N e par }}
+E --FALSE-->  H{{ N e impar }}
+G--> I([FIM])
+H --> I
+
 #### Pseudocódigo (1.0 ponto)
 
 ```
