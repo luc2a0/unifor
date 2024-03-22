@@ -105,6 +105,7 @@ A([INICIO]) --> B([FIM])
 ```
 
 SOLUCAO
+
  ```mermaid
 
 flowchart TD
@@ -120,6 +121,8 @@ E --TRUE--> G{{ N e par }}
 E --FALSE-->  H{{ N e impar }}
 G--> I([FIM])
 H --> I
+
+```
 
 #### Pseudocódigo (1.0 ponto)
 
