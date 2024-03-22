@@ -1,15 +1,15 @@
 <img src="https://drive.google.com/uc?id=1SOzRTjUt7cuBJpSqoK90fcAiKBrnpUJo" width="400">
 
-**Curso:** preencha com seus dados <br>
-**Disciplina:** preencha com seus dados <br>
-**Código/Turma:** preencha com seus dados <br>
+**Curso:** Engenharia da Computação <br>
+**Disciplina:** Racicíonio Lógico e Algoritmo <br>
+**Código/Turma:** T998-09 <br>
 **Professor:** Ricardo Carubbi <br>
-**Data:** preencha com a data de envio <br>
-**Aluno(a):** preencha com seus dados <br>
-**Matrícula:** preencha com seus dados <br>
+**Data:** 21/03 <br>
+**Aluno(a):** Lucca Vasconcelos Freire <br>
+**Matrícula:** 2410318 <br>
 
-**1a chamada (Sim/Não):** preencha com a opção correta <br>
-**2a chamada (Sim/Não):** preencha com a opção correta
+**1a chamada (Sim/Não):** Sim <br>
+**2a chamada (Sim/Não):** Não
 
 # Avaliação Diagnóstica 1
 
@@ -56,6 +56,17 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo TrocaValores
+DECLARE a, b, aux REAL
+INICIO
+ESCREVA "Digite o valor de a:"
+LEIA a
+ESCREVA "digite o valor de b"
+LEIA b
+aux <- a
+a <- b
+b <- aux
+ESCREVA "a =" b
+ESCREVA "b=" a
 FIM_ALGORITMO
 ```
 
@@ -82,6 +93,23 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE n, cont: NUMERICO
+i, nota: REAL
+INICIO
+ESCREVA "Digite o número de alunos:"
+LEIA N
+cont == 0
+ENQUANTO i<=n FAÇA
+ESCREVA: "Digite a nota do aluno" i
+LEIA nota
+SE nota >= 50 E nota <=100 ENTÃO
+cont <- cont + 1
+i <- i + 1
+SENÃO
+i <- +1
+FIM_ENQUANTO
+LEIA cont
+ESCREVA: "Número de alunos aprovados:" cont 
 FIM_ALGORITMO
 ```
 
@@ -108,6 +136,23 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE n, i, num: NUMERICO
+soma: REAL
+INICIO
+ESCREVA:"Número de alunos aprovados (n >= 0)"
+LEIA n
+SE n>=0
+soma == 0
+i == 1
+ENQUANTO i<=n FAÇA
+ESCREVA:"Digite um número:"
+LEIA num
+num + soma <- soma
+i + 1 <- i
+FIM_ENQUANTO
+ESCREVA: "A soma dos numeros é" soma
+SENÃO
+ESCREVA:"O valor deve ser maior ou igual a zero!"
 FIM_ALGORITMO
 ```
 
@@ -135,6 +180,19 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE S, n, termo: REAL
+i, numerador, denominador: NUMERICO
+INICIO
+ESCREVA: "Digite o número de termos da série S:"
+LEIA   n
+0 <-S
+REPITA
+numerador = 2 * i + 1
+denominador = 2 * i + 2
+numerador / denominador <- termo
+S + termo <- S
+ATE_QUE i > n
+ESCREVA: "Soma da série S é , S"   
 FIM_ALGORITMO
 ```
 
@@ -160,6 +218,20 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE n, fatorial: INTEIRO
+fator: NUMERICO
+INICIO
+ESCREVA: "Digite um número inteiro não-negativo"
+LEIA N
+SE N>=0
+1 <- fator
+REPITA
+fator * i <- fator
+i+1 <- i
+ATE_QUE i > n
+ESCREVA:"O fatorial de, n, é:" fator
+SENAO
+ESCREVA:"O valor deve ser maior ou igual a zero!"
 FIM_ALGORITMO
 ```
 
@@ -187,6 +259,21 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE a, b, termo_atual: INTEIRO
+i: NUMERICO
+INICIO
+ESCREVA: "Número de termos da série Fibonacci:"
+LEIA N
+0 <- a
+1 <- b
+REPITA
+0 == i
+termo_atual <- a + b
+b <- a
+termo_atual <- b
+i + 1 <- i
+ATE_QUE i > n
+ESCREVA "Os n primeiros termos da sequência de Fibonacci são": i, i + 1, i + 2,... i + n
 FIM_ALGORITMO
 ```
 #### Teste de mesa (0.5 ponto)
@@ -211,6 +298,20 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE num, num_inv, digito INTEIRO
+INICIO
+ESCREVA: "Digite um número inteiro:"
+LEIA num
+SE num >= 0
+0 <- num_inv
+ENQUANTO num >0 FAÇA
+num%10 <- digito
+num_inv*10 + digito <- num_inv
+num//10 <- num
+FIM_ENQUANTO
+ESCREVA: "Número invertido:, numero_inv"
+SENAO
+ESCREVA: "O número deve ser positivo!"  
 FIM_ALGORITMO
 ```
 
