@@ -211,8 +211,17 @@ Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 #### Fluxograma (1.0 ponto)
 
 ```mermaid
+
 flowchart TD
-A([INICIO]) --> B([FIM])
+
+A([INICIO]) --> B {{digite a nota:}}
+B --> C[\n\]
+C --> D[[i=1 ATÉ n PASSO 1]]
+D --> E[\soma <- soma + n\]
+E --> F[\i <- i + 1\]
+F --LOOP--> D[[i=1 ATÉ n PASSO 1]]
+D --> G([FIM])
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
