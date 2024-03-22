@@ -395,7 +395,7 @@ ESCREVA: "Digite um número inteiro e < 100:"
 LEIA num
   SE num >= 0 E num < 100
   0 <- num_inv
-  ENQUANTO num >0 FAÇA
+  ENQUANTO num < 10 FAÇA
     num%10 <- digito
     num_inv*10 + digito <- num_inv
     num//10 <- num
