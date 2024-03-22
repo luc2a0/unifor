@@ -99,11 +99,6 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 
 #### Fluxograma (1.0 ponto)
 
-```mermaid
-flowchart TD
-A([INICIO]) --> B([FIM])
-```
-
 SOLUCAO
 
  ```mermaid
@@ -128,24 +123,45 @@ H --> I
 
 ```
 Algoritmo ClassificaCategoria
+DECLARE n: inteiro
+INICIO
+ESCREVA: "Digite um número"
+LEIA N
+SE n >= 0
+ SE n %2= 0
+ Escreva: "N e par"
+ SENAO:"N e impar"
+SENAO
+ENQUANTO num < 0 FAÇA
+ESCREVA: "Digite um número positivo"
+FIM_ENQUANTO
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+|              | menor que zero| n %2 | n%2 +1 | 
+|      --      |      --     |      --      |
+| Par          |    NÃO  |  SIM  |  NÃO   | 
+| Ímpar        | NÃO      | NÃO      | SIM | 
 
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
 
 #### Fluxograma (1.0 ponto)
 
-```mermaid
+ ```mermaid
+
 flowchart TD
-A([INICIO]) --> B([FIM])
+
+A([INICIO]) --> B[\n\]
+B --> D{n%3 = 0 E}
+D --FALSE--> E[[n <= 30]]
+E --LOOP--> B
+D--TRUE-->
+B --> J{{i, i +1, i + 2, ..., i + n}} 
+J--> I([FIM])
+ 
 ```
 
 #### Pseudocódigo (1.0 ponto)
