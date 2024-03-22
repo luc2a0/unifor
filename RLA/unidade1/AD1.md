@@ -64,16 +64,15 @@ I --> J{{"b =", b}}
 
 ```
 Algoritmo TrocaValores
-DECLARE a, b,: real
-aux: inteiro
+DECLARE a, b, aux: real
 INICIO
 ESCREVA "Digite o valor de a:"
 LEIA a
 ESCREVA "digite o valor de b"
 LEIA b
-aux <- a
-a <- b
-b <- aux
+aux -> a
+b -> aux
+aux -> b
 ESCREVA "a =" b
 ESCREVA "b=" a
 FIM_ALGORITMO
