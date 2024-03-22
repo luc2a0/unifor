@@ -391,16 +391,16 @@ E --> W
 Algoritmo ContaAprovacoes
 DECLARE num, num_inv, digito INTEIRO
 INICIO
-ESCREVA: "Digite um número inteiro:"
+ESCREVA: "Digite um número inteiro e < 100:"
 LEIA num
-  SE num >= 0
+  SE num >= 0 E num < 100
   0 <- num_inv
   ENQUANTO num >0 FAÇA
     num%10 <- digito
     num_inv*10 + digito <- num_inv
     num//10 <- num
   FIM_ENQUANTO
-  ESCREVA: "Número invertido:, numero_inv"
+  ESCREVA: "Número invertido:" numero_inv
 SENAO
 ESCREVA: "O número deve ser positivo!"  
 FIM_ALGORITMO
