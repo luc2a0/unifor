@@ -64,7 +64,8 @@ I --> J{{"b =", b}}
 
 ```
 Algoritmo TrocaValores
-DECLARE a, b, aux REAL
+DECLARE a, b,: real
+aux: inteiro
 INICIO
 ESCREVA "Digite o valor de a:"
 LEIA a
@@ -112,14 +113,15 @@ K --LOO
 
 ```
 Algoritmo ContaAprovacoes
-DECLARE n, cont: NUMERICO
-i, nota: REAL
+DECLARE n, cont, i: NUMERICO
+nota: REAL
 INICIO
 ESCREVA "Digite o número de alunos:"
-LEIA N
-cont == 0
+LEIA n
+0 <-cont
+1 <- i
 ENQUANTO i<=n FAÇA
-  ESCREVA: "Digite a nota do aluno" i
+  ESCREVA: "Digite a nota do aluno" 
   LEIA nota
     SE nota >= 50 E nota <=100 ENTÃO
     cont <- cont + 1
@@ -177,8 +179,8 @@ INICIO
 ESCREVA:"Número de alunos aprovados (n >= 0)"
 LEIA n
 SE n>=0
-  soma == 0
-  i == 1
+  0 <- soma 
+  1 <- i
   ENQUANTO i<=n FAÇA
     ESCREVA:"Digite um número:"
     LEIA num
@@ -232,9 +234,11 @@ DECLARE S, n, termo: REAL
 i, numerador, denominador: NUMERICO
 INICIO
 ESCREVA: "Digite o número de termos da série S:"
-LEIA   n
+LEIA  n
 0 <-S
+0 <- i
 REPITA
+  i=0,1,2,.., n
   numerador = 2 * i + 1
   denominador = 2 * i + 2
   numerador / denominador <- termo
