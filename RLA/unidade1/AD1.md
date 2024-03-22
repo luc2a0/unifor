@@ -119,13 +119,13 @@ ESCREVA "Digite o número de alunos:"
 LEIA N
 cont == 0
 ENQUANTO i<=n FAÇA
-ESCREVA: "Digite a nota do aluno" i
-LEIA nota
-SE nota >= 50 E nota <=100 ENTÃO
-cont <- cont + 1
-i <- i + 1
-SENÃO
-i <- +1
+  ESCREVA: "Digite a nota do aluno" i
+  LEIA nota
+    SE nota >= 50 E nota <=100 ENTÃO
+    cont <- cont + 1
+    i <- i + 1
+    SENÃO
+    i <- +1
 FIM_ENQUANTO
 LEIA cont
 ESCREVA: "Número de alunos aprovados:" cont 
@@ -177,15 +177,15 @@ INICIO
 ESCREVA:"Número de alunos aprovados (n >= 0)"
 LEIA n
 SE n>=0
-soma == 0
-i == 1
-ENQUANTO i<=n FAÇA
-ESCREVA:"Digite um número:"
-LEIA num
-num + soma <- soma
-i + 1 <- i
-FIM_ENQUANTO
-ESCREVA: "A soma dos numeros é" soma
+  soma == 0
+  i == 1
+  ENQUANTO i<=n FAÇA
+    ESCREVA:"Digite um número:"
+    LEIA num
+    num + soma <- soma
+    i + 1 <- i
+  FIM_ENQUANTO
+  ESCREVA: "A soma dos numeros é" soma
 SENÃO
 ESCREVA:"O valor deve ser maior ou igual a zero!"
 FIM_ALGORITMO
@@ -235,10 +235,10 @@ ESCREVA: "Digite o número de termos da série S:"
 LEIA   n
 0 <-S
 REPITA
-numerador = 2 * i + 1
-denominador = 2 * i + 2
-numerador / denominador <- termo
-S + termo <- S
+  numerador = 2 * i + 1
+  denominador = 2 * i + 2
+  numerador / denominador <- termo
+  S + termo <- S
 ATE_QUE i > n
 ESCREVA: "Soma da série S é , S"   
 FIM_ALGORITMO
@@ -286,12 +286,12 @@ INICIO
 ESCREVA: "Digite um número inteiro não-negativo"
 LEIA N
 SE N>=0
-1 <- fator
-REPITA
-fator * i <- fator
-i+1 <- i
-ATE_QUE i > n
-ESCREVA:"O fatorial de, n, é:" fator
+  1 <- fator
+  REPITA
+    fator * i <- fator
+    i+1 <- i
+  ATE_QUE i > n
+  ESCREVA:"O fatorial de, n, é:" fator
 SENAO
 ESCREVA:"O valor deve ser maior ou igual a zero!"
 FIM_ALGORITMO
@@ -338,11 +338,11 @@ LEIA N
 0 <- a
 1 <- b
 REPITA
-0 == i
-termo_atual <- a + b
-b <- a
-termo_atual <- b
-i + 1 <- i
+  0 == i
+  termo_atual <- a + b
+  b <- a
+  termo_atual <- b
+  i + 1 <- i
 ATE_QUE i > n
 ESCREVA "Os n primeiros termos da sequência de Fibonacci são": i, i + 1, i + 2,... i + n
 FIM_ALGORITMO
@@ -389,14 +389,14 @@ DECLARE num, num_inv, digito INTEIRO
 INICIO
 ESCREVA: "Digite um número inteiro:"
 LEIA num
-SE num >= 0
-0 <- num_inv
-ENQUANTO num >0 FAÇA
-num%10 <- digito
-num_inv*10 + digito <- num_inv
-num//10 <- num
-FIM_ENQUANTO
-ESCREVA: "Número invertido:, numero_inv"
+  SE num >= 0
+  0 <- num_inv
+  ENQUANTO num >0 FAÇA
+    num%10 <- digito
+    num_inv*10 + digito <- num_inv
+    num//10 <- num
+  FIM_ENQUANTO
+  ESCREVA: "Número invertido:, numero_inv"
 SENAO
 ESCREVA: "O número deve ser positivo!"  
 FIM_ALGORITMO
