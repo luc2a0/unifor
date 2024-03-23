@@ -91,7 +91,7 @@ FIM_ALGORITMO
 #### Teste de mesa (1.0 ponto)
 
 | N | Aumento | Final | 
-|      --      |      --      |      --      | 
+|      --      |      --      |      --      |   
 |  600   | 60   |  660  |
 | 230  |  46     | 276       | 
 
@@ -138,7 +138,7 @@ FIM_ALGORITMO
 #### Teste de mesa (1 ponto)
 
 | -- | N1 | N2 | M | APROVADO | 
-|      --      |      --      |      --      |   
+|      --      |      --      |      --      |   --      | --      | 
 | T1  | 5      | 5   |  6   | NAO    |
 | T2  | 7       | 8   | 7 | SIM |
 | T3 | 9        | 3       | 5 | SIM |
