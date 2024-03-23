@@ -133,7 +133,7 @@ SENAO
 ESCREVA "Digite um número positivo entre 0 e 10."
 FIM_ALGORITMO
 
-```**
+```
 
 #### Teste de mesa (1 ponto)
 
