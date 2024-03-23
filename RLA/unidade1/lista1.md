@@ -57,22 +57,43 @@ Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 ter�
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{digite seu salario:}}
+B --> C[/N/]
+C --> D{N > 500}
+D-TRUE-> E[N + N*0.1 ->Sm]
+E--> F[/Sm/]
+F--> I([FIM])
+D-FALSE-> G[N + N*0.2 ->Sm]
+G--> H[/Sm/]
+H--> I([FIM])
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE N, Sm NUMERICO
+INICIO
+ESCREVA "digite seu salario"
+LEIA N
+SE N > 500
+	N + N*0.1 -> Sm
+	LEIA Sm
+	ESCREVA "Você recebeu um aumento de 10%"
+	SENAO
+	N + N*0.2 -> Sm
+	LEIA Sm
+	ESCREVA	"Você recebeu um aumento de 20%"	
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| N | Aumento | Final | 
+|      --      |      --      |      --      | 
+|  600   | 60   |  660  |
+| 230  |  46     | 276       | 
 
 **## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
@@ -81,22 +102,46 @@ Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média a
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B{{Digite duas notas entre 0 e 10:}}
+B --> C[/N1/]
+C --> D[/N2/]
+D --> E{0 <= N <= 10}
+E -TRUE-> F{(N1*N2)/2 < M}
+TRUE--> G{{Aluno reprovado}}
+F-FALSE-> H{{Aluno aprovado}}
+E-FALSE-> I{{Digite um número positivo entre 0 e 10.}}
+G --> J([FINAL])
+H --> J([FINAL])
+I --> J([FINAL])
 ```
 
 #### Pseudocódigo (1 ponto)
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE N1, N2, M NUMERICO
+INICIO
+ESCREVA "Digite duas notas entre 0 e 10:"
+LEIA N1
+LEIA N2
+SE 0 <= N <= 10
+	SE (N1*N2)/2 < M
+	ESCREVA "Aluno reprovado"
+	SENAO
+	ESCREVA "Aluno aprovado"
+SENAO
+ESCREVA "Digite um número positivo entre 0 e 10."
 FIM_ALGORITMO
+
 ```**
 
 #### Teste de mesa (1 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| -- | N1 | N2 | M | APROVADO | 
+|      --      |      --      |      --      |   
+| T1  | 5      | 5   |  6   | NAO    |
+| T2  | 7       | 8   | 7 | SIM |
+| T3 | 9        | 3       | 5 | SIM |
 
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
@@ -106,15 +151,39 @@ Caso não atender a restrição de idade, calcular quantos anos faltam para o ca
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B {{Digite sua idade}}
+B--> C[/N/]
+C--> D{N >= 18}
+D -TRUE-> E{{O candidato pode tirar CNH}}
+D -FALSE-> F[18 - N = N1]
+F --> G[/N1/]
+G--> H{{O candidato não pode tirar CNH e faltam" N1 anos para tirar}}
+H --> J([FIM])
+I --> J([FIM])
 ```
 
 #### Pseudocódigo (1.0 ponto)
 
 ```
 Algoritmo ContaAprovacoes
+DECLARE N, N1 NUMERICO
+INICIO
+ESCREVA "Digite sua idade"
+LEIA N
+SE N >= 18
+	ESCREVA "O candidato pode tirar CNH"
+SENAO
+	18 - N -> N1
+	LEIA N1
+	ESCREVA "O candidato não pode tirar CNH e faltam" N1 anos para tirar"
 FIM_ALGORITMO
 ```
+
+| -- | N | N1 | PODE TIRAR? |
+|      --      |      --      |      --      |        --      |     
+| T1  | 19      | --  |  SIM   |  
+| T2  | 15       | 3  | NAO | 
+| T3 | 9        | 9    | NAO |
 
 
 
