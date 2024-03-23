@@ -218,7 +218,7 @@ C --> D[S = 0]
 D --> E[[i=0 ATE n PASSO 1]]
 E --i > n--> J{{"Soma da série S é ", S}}
 J --> K([FIM])
-E --"i=0,1,2,..,n"--> F[numerador = 2 * i + 1]
+--> F[numerador = 2 * i + 1]
 F --> G[denominador = 2 * i + 2]
 G --> H[termo = numerador / denominador]
 H --> I[S += termo]
@@ -234,14 +234,14 @@ i, numerador, denominador: NUMERICO
 INICIO
 ESCREVA: "Digite o número de termos da série S:"
 LEIA  n
-0 <-S
+S -> 0
 0 <- i
 REPITA
-  i=0,1,2,.., n
   numerador = 2 * i + 1
   denominador = 2 * i + 2
   numerador / denominador <- termo
   S + termo <- S
+i + 1 <- i
 ATE_QUE i > n
 ESCREVA: "Soma da série S é , S"   
 FIM_ALGORITMO
